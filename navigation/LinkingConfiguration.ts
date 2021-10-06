@@ -1,13 +1,7 @@
-/**
- * Learn more about deep linking with React Navigation
- * https://reactnavigation.org/docs/deep-linking
- * https://reactnavigation.org/docs/configuring-links
- */
-
 import { LinkingOptions } from '@react-navigation/native';
 import * as Linking from 'expo-linking';
 
-import { RootStackParamList } from '../types';
+import { RootStackParamList } from './index';
 
 const linking: LinkingOptions<RootStackParamList> = {
   prefixes: [Linking.makeUrl('/')],
@@ -15,22 +9,22 @@ const linking: LinkingOptions<RootStackParamList> = {
     screens: {
       Root: {
         screens: {
-          TabOne: {
+          Game: {
             screens: {
-              TabOneScreen: 'one',
-            },
+              GameScreen: 'Game'
+            }
           },
-          TabTwo: {
+          Settings: {
             screens: {
-              TabTwoScreen: 'two',
-            },
-          },
-        },
+              SettingsScreen: 'Settings'
+            }
+          }
+        }
       },
       Modal: 'modal',
-      NotFound: '*',
-    },
-  },
+      NotFound: '*'
+    }
+  }
 };
 
 export default linking;
