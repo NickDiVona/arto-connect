@@ -4,24 +4,29 @@ import * as Linking from 'expo-linking';
 import { RootStackParamList } from './index';
 
 const linking: LinkingOptions<RootStackParamList> = {
-  prefixes: [Linking.makeUrl('/')],
+  // const linking: LinkingOptions = {
+  prefixes: [Linking.createURL('/')],
   config: {
     screens: {
       Root: {
         screens: {
           Game: {
             screens: {
-              GameScreen: 'Game'
+              GameScreen: 'game'
+            }
+          },
+          Scores: {
+            screens: {
+              ScoresScreen: 'scores'
             }
           },
           Settings: {
             screens: {
-              SettingsScreen: 'Settings'
+              SettingsScreen: 'settings'
             }
           }
         }
       },
-      Modal: 'modal',
       NotFound: '*'
     }
   }

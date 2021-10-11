@@ -1,8 +1,7 @@
 import * as React from 'react';
-import { RootTabScreenProps } from '../types';
 import { StyledView, StyledText } from '../components/styled';
 
-const TabTwoScreen = ({ navigation }: RootTabScreenProps<'TabOne'>) => {
+const GameScreen = ({ navigation }: any) => {
   return (
     <StyledView flex={1} justifyContent={'center'} alignItems={'center'}>
       <StyledText fontSize={16}>Welcome to</StyledText>
@@ -11,4 +10,4 @@ const TabTwoScreen = ({ navigation }: RootTabScreenProps<'TabOne'>) => {
   );
 };
 
-export default TabTwoScreen;
+export default GameScreen;
