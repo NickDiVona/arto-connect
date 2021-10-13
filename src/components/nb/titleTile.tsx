@@ -16,7 +16,7 @@ export const TitleTile = ({ title }: titleTileProps) => {
       alignItems={'center'}
       height={10}
       width={winWidth}
-      maxWidth={150}
+      maxWidth={{ base: 80, md: 100, lg: 120 }}
       margin={1}
       bgColor={'lightskyblue'}
     >

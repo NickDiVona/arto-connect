@@ -16,8 +16,8 @@ export const Cell = () => {
       bgColor={bgColor}
       width={winWidth}
       height={winWidth}
-      maxHeight={150}
-      maxWidth={150}
+      maxHeight={{ base: 80, md: 100, lg: 120 }}
+      maxWidth={{ base: 80, md: 100, lg: 120 }}
       margin={1}
     >
       <Box flex={1} justifyContent={'center'} alignItems={'center'}>

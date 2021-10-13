@@ -11,13 +11,6 @@ export const Board = () => {
     <VStack justifyContent={'center'} alignItems={'center'}>
       {generateRows()}
       <HStack>
-        <TitleTile title={'B'} />
-        <TitleTile title={'I'} />
-        <TitleTile title={'N'} />
-        <TitleTile title={'G'} />
-        <TitleTile title={'O'} />
-      </HStack>
-      <HStack>
         <Cell />
         <Cell />
         <Cell />
