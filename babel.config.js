@@ -10,7 +10,9 @@ module.exports = function (api) {
           extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.svg', '.png'],
           alias: {
             components: './src/components/',
-            screens: './src/screens/'
+            screens: './src/screens/',
+            constants: './src/constants/',
+            redux: './src/redux'
           }
         }
       ],
