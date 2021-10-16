@@ -1,6 +1,6 @@
 import * as ActionTypes from '../actionTypes';
 //
-import { racesList } from 'constants/races';
+// import { racesList } from 'constants/races';
 //
 
 export interface StateType {
@@ -19,7 +19,9 @@ export interface EnemyRaceReducerTypes {
   };
 }
 
-export const boardTypeReducer = (state: StateType, action: ActionType) => {
+const INITIAL_STATE = 'zerg';
+
+export const boardTypeReducer = (state = INITIAL_STATE, action: ActionType) => {
   switch (action.type) {
     default:
       return state;

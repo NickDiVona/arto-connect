@@ -5,7 +5,7 @@ import { NativeBaseProvider } from 'native-base';
 import { Provider } from 'react-redux';
 //
 import Navigation from './src/navigation';
-import { ConfigureStore } from 'redux/configureStore';
+import { ConfigureStore } from './src/redux/configureStore';
 //
 
 const nativeBaseConfig = {
@@ -14,12 +14,12 @@ const nativeBaseConfig = {
   }
 };
 
-const reduxStore = ConfigureStore();
+const { persistor, store } = ConfigureStore();
 
 export default function App() {
   return (
     <SafeAreaProvider>
-      <Provider store={reduxStore}>
+      <Provider store={store}>
         <NativeBaseProvider config={nativeBaseConfig}>
           <Navigation />
           <StatusBar />
