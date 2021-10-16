@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Board } from 'components/nb';
-import { StyledView, StyledText } from '../components/styled';
+import { StyledView, StyledText } from 'components/styled';
+import { Board } from 'components/index';
 
 const GameScreen = ({ navigation }: any) => {
   return (

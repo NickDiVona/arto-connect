@@ -2,11 +2,11 @@ import React from 'react';
 import { useWindowDimensions } from 'react-native';
 import { Box, Text } from 'native-base';
 
-interface titleTileProps {
+interface TitleTileProps {
   title: string;
 }
 
-export const TitleTile = ({ title }: titleTileProps) => {
+export const TitleTile: React.FC<TitleTileProps> = ({ title }) => {
   const winWidth = useWindowDimensions().width / 6;
 
   return (

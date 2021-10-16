@@ -9,9 +9,9 @@ module.exports = function (api) {
           root: ['./src'],
           extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.svg', '.png'],
           alias: {
-            components: './src/components/',
-            screens: './src/screens/',
-            constants: './src/constants/'
+            'components/*': './src/components',
+            'screens/*': './src/screens/',
+            'constants/*': './src/constants/'
           }
         }
       ],
