@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 //
 import Navigation from './src/navigation';
 import { ConfigureStore } from './src/redux/configureStore';
+import { PersistGate } from 'redux-persist/integration/react';
 //
 
 const nativeBaseConfig = {
@@ -20,10 +21,12 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <Provider store={store}>
-        <NativeBaseProvider config={nativeBaseConfig}>
-          <Navigation />
-          <StatusBar />
-        </NativeBaseProvider>
+        <PersistGate persistor={persistor}>
+          <NativeBaseProvider config={nativeBaseConfig}>
+            <Navigation />
+            <StatusBar />
+          </NativeBaseProvider>
+        </PersistGate>
       </Provider>
     </SafeAreaProvider>
   );
