@@ -40,5 +40,17 @@ export const chat = [
     type: 'ASCII',
     description:
       'Any variation of the stock "DVD Video" ASCII. The DVD is often replaced with the race match up (eg: TvT Video).'
+  },
+  {
+    name: 'AYAYA Spam',
+    type: 'Chat',
+    description:
+      'Any mass AYAYA or Cutie related spam. Remember guys, they cannot ban you all. Mods are uglies.'
+  },
+  {
+    name: 'Weeb Purge',
+    type: 'Chat',
+    description:
+      'An act of tyranny in which the moderators delete AYAYA ASCIIs and other variations of weeb emotes.'
   }
 ];
