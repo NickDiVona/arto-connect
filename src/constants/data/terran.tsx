@@ -5,9 +5,7 @@ export const terran = [
     description:
       'Build consisting of mostly Factory units. Priority generally is Siege Tanks and Vultures, both of which have upgrades at the attached Machine Shop. This build allows for a more "turtle-style" of play, where the Terran can hide behind Sieged Tanks and/or Vulture Spider Mines.',
     artysReaction:
-      'While Artosis often employs this very strategy, he loves to complain about his opponent "just sieging his tanks." There are a few other complaints such as complaining about Spider Mines, but generally speaking, he is pretty calm when facing a fellow Factory man.',
-    bonus:
-      'FUCKING NO SKILL TERRAN FACTORY MAN JUST SPAMMING TANKS AND VULTS LOOK AT HOW MUCH BETTER I HAD TO PLAY THAN HIM TO WIN I EVEN SET UP RECALL FLANKS AND DIDNT CHECK MY ARBITER ENERGY FOR STASIS BEFORE FIGHTING JESUS CHRIST WHAT A BROKEN RACE'
+      'While Artosis often employs this very strategy, he loves to complain about his opponent "just sieging his tanks." There are a few other complaints such as complaining about Spider Mines, but generally speaking, he is pretty calm when facing a fellow Factory man.'
   },
   {
     name: 'Bunker Rush',
