@@ -1,28 +1,22 @@
-import * as ActionTypes from '../actionTypes';
-//
-// import { racesList } from 'constants/races';
+import * as Actions from '../actionTypes';
 //
 
-export interface StateType {
-  state: string;
-}
-
-export interface ActionType {
+export interface ActionTypes {
   type: string;
-  payload?: string;
+  payload?: string[];
 }
 
-export interface EnemyRaceReducerTypes {
-  action: {
-    type: 'string';
-    payload: 'string';
-  };
+export interface BoardTypeReducerTypes {
+  boardType: string[];
 }
 
-const INITIAL_STATE = 'zerg';
+const INITIAL_STATE = { boardType: [] };
 
-export const boardTypeReducer = (state = INITIAL_STATE, action: ActionType) => {
+export const BoardTypeReducer = (state = INITIAL_STATE, action: ActionTypes) => {
   switch (action.type) {
+    case Actions.UPDATE_BOARD_TYPE:
+      return { ...state, boardType: action.payload };
+
     default:
       return state;
   }

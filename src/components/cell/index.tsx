@@ -2,14 +2,19 @@ import React, { useState } from 'react';
 import { useWindowDimensions } from 'react-native';
 import { Box, Pressable } from 'native-base';
 
-export const Cell: React.FC = () => {
+export interface CellProps {
+  name: string;
+  type: string;
+  description: string;
+  artysReaction?: string;
+}
+
+export const Cell: React.FC<CellProps> = ({ name, type, description, artysReaction }) => {
   const winWidth = useWindowDimensions().width / 6;
   const [bgColor, setBgColor] = useState('lightblue');
 
   const changeColor = () => {
-    return bgColor === 'lightblue'
-      ? setBgColor('lightgreen')
-      : setBgColor('lightblue');
+    return bgColor === 'lightblue' ? setBgColor('lightgreen') : setBgColor('lightblue');
   };
 
   return (
@@ -22,7 +27,9 @@ export const Cell: React.FC = () => {
       maxWidth={{ base: 80, md: 100, lg: 120 }}
       margin={1}
     >
-      <Box flex={1} justifyContent={'center'} alignItems={'center'}></Box>
+      <Box flex={1} justifyContent={'center'} alignItems={'center'}>
+        {name}
+      </Box>
     </Pressable>
   );
 };

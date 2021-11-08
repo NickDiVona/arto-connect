@@ -1,1 +1,7 @@
-export const UPDATE_ENEMY_RACE = 'UPDATE_ENEMY_RACE';
+// Board Types
+export const UPDATE_BOARD_TYPE = 'UPDATE_BOARD_TYPE';
+
+// Board Sizes
+export const INCREASE_BOARD_SIZE = 'INCREASE_BOARD_SIZE';
+export const DECREASE_BOARD_SIZE = 'DECREASE_BOARD_SIZE';
+export const RESET_BOARD_SIZE = 'RESET_BOARD_SIZE';

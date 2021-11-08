@@ -1,14 +1,10 @@
-import * as React from 'react';
-import { StyledView, StyledText } from 'components/styled';
-import { Board } from 'components/index';
+import React from 'react';
+//
+import ConnectedBoard from 'containers/board';
+//
 
 const GameScreen = ({ navigation }: any) => {
-  return (
-    <StyledView flex={1} justifyContent={'center'} alignItems={'center'}>
-      <StyledText fontSize={48}>Arto Connect</StyledText>
-      <Board />
-    </StyledView>
-  );
+  return <ConnectedBoard />;
 };
 
 export default GameScreen;
