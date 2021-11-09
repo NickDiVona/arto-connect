@@ -1,13 +1,14 @@
-import * as Actions from '../actionTypes';
+import * as Actions from "../actionTypes";
+import { ArrayCellDataTypes } from "constants/data";
 //
 
 export interface ActionTypes {
   type: string;
-  payload?: string[];
+  payload?: ArrayCellDataTypes[];
 }
 
 export interface BoardTypeReducerTypes {
-  boardType: string[];
+  boardType: ArrayCellDataTypes[];
 }
 
 const INITIAL_STATE = { boardType: [] };

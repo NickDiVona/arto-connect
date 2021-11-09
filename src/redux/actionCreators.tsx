@@ -1,5 +1,6 @@
-import * as ActionTypes from './actionTypes';
-import { zerg, terran, protoss, events } from 'constants/data';
+import * as ActionTypes from "./actionTypes";
+import { zerg, terran, protoss, events } from "constants/data";
+import { shuffle } from "constants/functions/shuffle";
 
 export const updateBoardType = (boardType: string) => {
   const zergGame = events.concat(zerg);
@@ -8,21 +9,14 @@ export const updateBoardType = (boardType: string) => {
   const noGame = events;
   let currentGameType = noGame;
 
-  switch (boardType) {
-    case 'Zerg':
-      currentGameType = zergGame;
-
-    case 'Terran':
-      currentGameType = terranGame;
-
-    case 'Protoss':
-      currentGameType = protossGame;
-
-    case 'Events':
-      currentGameType = noGame;
-
-    default:
-      currentGameType = noGame;
+  if (boardType === "Zerg") {
+    currentGameType = shuffle(zergGame);
+  } else if (boardType === "Terran") {
+    currentGameType = shuffle(terranGame);
+  } else if (boardType === "Protoss") {
+    currentGameType = shuffle(protossGame);
+  } else {
+    currentGameType = shuffle(noGame);
   }
 
   return {

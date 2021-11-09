@@ -1,9 +1,9 @@
-import { combineReducers, createStore } from 'redux';
+import { combineReducers, createStore } from "redux";
 // import storage from 'redux-persist/es/storage';
 // import { persistStore, persistCombineReducers } from 'redux-persist';
 //
-import { BoardTypeReducer, BoardTypeReducerTypes } from './reducers/boardTypeReducer';
-import { BoardSizeReducer, BoardSizeReducerTypes } from './reducers/boardSizeReducer';
+import { BoardTypeReducer, BoardTypeReducerTypes } from "./reducers/boardTypeReducer";
+import { BoardSizeReducer, BoardSizeReducerTypes } from "./reducers/boardSizeReducer";
 //
 
 export interface RootStateTypes {

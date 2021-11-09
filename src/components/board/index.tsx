@@ -1,41 +1,17 @@
-import React from 'react';
-import { HStack, VStack } from 'native-base';
-import { Cell, CellProps } from 'components/cell';
+import React from "react";
+import { HStack, VStack, View, Text } from "native-base";
+import { ArrayCellDataTypes } from "constants/data";
 
-export interface BoardProps {
-  data: CellProps[];
+interface BoardTypes {
+  boardType: ArrayCellDataTypes[];
 }
 
-export const Board: React.FC<BoardProps> = ({ data }) => {
-  const dummyData = [
-    { name: 'yeehaw', type: 'MonkaT', description: 'hello this is some description text' },
-    { name: 'yeehaw', type: 'MonkaT', description: 'hello this is some description text' },
-    { name: 'yeehaw', type: 'MonkaT', description: 'hello this is some description text' },
-    { name: 'yeehaw', type: 'MonkaT', description: 'hello this is some description text' },
-    { name: 'yeehaw', type: 'MonkaT', description: 'hello this is some description text' }
-  ];
-
+export const Board: React.FC<BoardTypes> = ({ boardType }) => {
   const renderRows = () => {
-    return dummyData.map((item) => {
-      return <Cell name={item.name} type={item.type} description={item.description} />;
-    });
+    return boardType.map((item) => <Text>{item.description}</Text>);
   };
 
-  return (
-    <VStack justifyContent={'center'} alignItems={'center'}>
-      <HStack>{renderRows()}</HStack>
-      <HStack>
-        <HStack>{renderRows()}</HStack>
-      </HStack>
-      <HStack>
-        <HStack>{renderRows()}</HStack>
-      </HStack>
-      <HStack>
-        <HStack>{renderRows()}</HStack>
-      </HStack>
-      <HStack>
-        <HStack>{renderRows()}</HStack>
-      </HStack>
-    </VStack>
-  );
+  return <View>{renderRows()}</View>;
 };
+
+export default Board;

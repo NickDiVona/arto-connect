@@ -1,8 +1,8 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
+import React from "react";
+import { useDispatch } from "react-redux";
 //
-import BoardSelectionButton from 'components/boardSelectionButton';
-import { updateBoardType } from 'redux/actionCreators';
+import BoardSelectionButton from "components/boardSelectionButton";
+import { updateBoardType } from "redux/actionCreators";
 //
 
 export interface CellProps {
@@ -13,14 +13,15 @@ export interface CellProps {
 const ConnectedBoardSelectionButton: React.FC<CellProps> = ({ boardType, bgColor }) => {
   const dispatch = useDispatch();
 
-  const boardSelectionButtonPressed = (boardType: string) => {
+  const boardSelectionButtonPressed = () => {
     dispatch(updateBoardType(boardType));
+    console.log(boardType);
   };
 
   return (
     <BoardSelectionButton
       boardType={boardType}
-      updateBoardType={() => boardSelectionButtonPressed(boardType)}
+      updateBoardType={() => boardSelectionButtonPressed()}
       bgColor={bgColor}
     />
   );
