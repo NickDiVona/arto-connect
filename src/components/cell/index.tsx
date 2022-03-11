@@ -27,7 +27,13 @@ const Cell: React.FC<CellTypes> = ({ name, type, description, artysReaction }) =
       maxWidth={{ base: 80, md: 100, lg: 120 }}
       margin={1}
     >
-      <Box flex={1} justifyContent={"center"} alignItems={"center"}>
+      <Box
+        flex={1}
+        justifyContent={"center"}
+        alignItems={"center"}
+        padding={10}
+        textAlign={"center"}
+      >
         {name}
       </Box>
     </Pressable>

@@ -1,6 +1,7 @@
 import * as ActionTypes from "./actionTypes";
 import { zerg, terran, protoss, events } from "constants/data";
 import { shuffle } from "constants/functions/shuffle";
+import { arrayToArrayOfArrays } from "constants/functions/arrayToarrayOfArrays";
 
 export const updateBoardType = (boardType: string) => {
   const zergGame = events.concat(zerg);
@@ -9,14 +10,33 @@ export const updateBoardType = (boardType: string) => {
   const noGame = events;
   let currentGameType = noGame;
 
-  if (boardType === "Zerg") {
-    currentGameType = shuffle(zergGame);
-  } else if (boardType === "Terran") {
-    currentGameType = shuffle(terranGame);
-  } else if (boardType === "Protoss") {
-    currentGameType = shuffle(protossGame);
-  } else {
-    currentGameType = shuffle(noGame);
+  switch (boardType) {
+    case "Zerg":
+      currentGameType = shuffle(zergGame);
+      break;
+
+    case "Terran":
+      currentGameType = shuffle(terranGame);
+      break;
+
+    case "Protoss":
+      currentGameType = shuffle(protossGame);
+      break;
+
+    case "Events":
+      currentGameType = shuffle(noGame);
+      break;
+
+    default:
+      currentGameType = shuffle(noGame);
+      break;
+  }
+
+  if (currentGameType.length > 25) {
+    currentGameType.length = 25;
+    let temp = arrayToArrayOfArrays(currentGameType);
+
+    currentGameType = temp;
   }
 
   return {

@@ -3,7 +3,7 @@ export * from "./terran";
 export * from "./zerg";
 export * from "./events";
 
-export interface ArrayCellDataTypes {
+export interface ArrayCellDataProps {
   name: string;
   type: string;
   description: string;
